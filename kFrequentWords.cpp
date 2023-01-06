@@ -1,6 +1,10 @@
 // cpp program to find the k frequent words from an array of words(leetcode)
-#include<bits/stdc++.h>
+// Return the answer sorted by the frequency from highest to lowest 
+// Sort the words with the same frequency by their lexicographical order.
+// Input: {"the","day","is","sunny","the","the","the","sunny","is","is"} k = 4
+// Output: {the, is, sunny, day}  freq of "the" = 4, feq of "is" = 3, freq of "sunny" = 2, freq of "day" = 1
 
+#include<bits/stdc++.h>
 using namespace std;
 
 struct compare {
@@ -13,7 +17,7 @@ struct compare {
     }
 };
 
-void frequent(vector<string> &words, int k) {
+vector<string> frequent(vector<string> &words, int k) {
     map<string, int> mp;
     for(auto word : words) {
         mp[word]++;
@@ -31,15 +35,16 @@ void frequent(vector<string> &words, int k) {
         q.pop();
     }
 
-    for(auto p : ans) {
-        std::cout << p << " " ;
-    }
+    return ans;
     
 }
 
 int main() {
 
     vector<string> vect = {"the","day","is","sunny","the","the","the","sunny","is","is"};
-    frequent(vect, 4);
+    vector<string> ans = frequent(vect, 4);
+    for(auto s : ans) {
+        std::cout << s << " ";
+    }
 
 }
