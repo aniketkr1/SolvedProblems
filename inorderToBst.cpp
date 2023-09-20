@@ -16,7 +16,6 @@ struct node {
 };
 
 // we are going the construct the binary tree from the given inorder traversal
-
 node *constructTree(int arr[], int start, int end) {
     if(start > end) {
         return NULL;
