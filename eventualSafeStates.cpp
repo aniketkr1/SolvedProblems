@@ -73,6 +73,7 @@ int main()
     int V = 7;
     vector<int> adj[] = {{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}};
     vector<int> ans = eventualSafeNodes(V, adj);
+    std::cout << "Safe Nodes: ";
     for (auto v : ans)
     {
         std::cout << v << " ";
