@@ -1,3 +1,10 @@
+/*
+Given an array arr of n integers, write a function that returns true if there is a triplet (a, b, c) from the array (where a, b, and c are on different indexes) that satisfies a2 + b2 = c2, otherwise return false.
+Input: N = 5, Arr[] = {3, 2, 4, 6, 5}
+Output: Yes
+Explanation: a=3, b=4, and c=5 forms a
+pythagorean triplet.
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -20,8 +27,8 @@ int main() {
     int arr[] = {3, 2, 4, 6, 5};
     int n = sizeof(arr)/sizeof(arr[0]);
     if(checkTriplet(arr, n)) {
-        std::cout << "pythagorean triplet found" << std::endl;
+        std::cout << "Yes" << std::endl;
     } else {
-        std::cout << "pythagorean triplet not found" << std::endl;
+        std::cout << "No" << std::endl;
     }
 }
