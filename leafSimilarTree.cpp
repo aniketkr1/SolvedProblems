@@ -64,6 +64,7 @@ Node* createBinaryTree(const std::vector<int>& arr, int index) {
 
     return root;
 }
+
 void inorderTraversal(Node *root, vector<int> &nums) {
     if(root != NULL) {
         inorderTraversal(root->left, nums);
