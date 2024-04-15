@@ -3,7 +3,7 @@
 // 1 is placed for second smallest element, and N-1 is placed for the largest element
 // Input:Arr[] = {10, 40, 20}
 // Output: 0 2 1
-// Explanation: 10 is the least element so itis replaced by 0. 
+// Explanation: 10 is the least element so it is replaced by 0. 
 // 40 is the largest element so it is replaced by 3-1 = 2
 // And 20 is the 2nd smallest element so it is replaced by 1.
 
