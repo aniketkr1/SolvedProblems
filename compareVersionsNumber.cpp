@@ -85,6 +85,11 @@ int main() {
     string version1 = "1.0.3", version2 = "1.0.0.0";
     Solution s = Solution();
     int val = s.compareVersion(version1, version2);
-    val == 1 ? std::cout << "version1 > version1 " : std::cout << "version1 < version2" << std::endl;
-    val == 0 ? std::cout << "version1 == version" : std::cout << "";
+    if(val == 1) {
+        std::cout << "version1 > version1" << std::endl;
+    } else if(val == -1) {
+        std::cout << "version1 < version2" << std::endl;
+    } else if(val == 0) {
+        std::cout << "version1 = version2" << std::endl;
+    }
 }
