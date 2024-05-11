@@ -1,7 +1,10 @@
-// cpp program to sort the linked list in increasing order
-// from absolute sotred linked list
-// Input: 1 -> -2 -> -3 -> 4 -> -5
-// Output: -5 -> -3 -> -2 -> 1 -> 4
+/*
+cpp program to sort the linked list in increasing order from absolute sotred linked list
+
+Example: 1
+Input: 1 -> -2 -> -3 -> 4 -> -5
+Output: -5 -> -3 -> -2 -> 1 -> 4
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
