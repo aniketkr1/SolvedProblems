@@ -1,6 +1,7 @@
-// cpp program to find the number of minimum steps to reach from source A(0,0) to destination A(X,Y)
-// Note: You can only move left, right, up and down, and only through cells that contain 1.
 /*
+cpp program to find the number of minimum steps to reach from source A(0,0) to destination A(X,Y)
+Note: You can only move left, right, up and down, and only through cells that contain 1.
+
 Input:
 N=3, M=4
 A=[[1,0,0,0],
@@ -16,13 +17,12 @@ The shortest path is as follows:
 
 #include <bits/stdc++.h>
 using namespace std;
-int shortestDistance(int N, int M, vector<vector<int>> A, int X, int Y)
-{
-    // code here
-    if (A[0][0] == 0 || A[X][Y] == 0)
-    {
+int shortestDistance(int N, int M, vector<vector<int>> A, int X, int Y) {
+
+    if (A[0][0] == 0 || A[X][Y] == 0) {
         return -1;
     }
+
     int dx[4] = {-1, 0, 1, 0};
     int dy[4] = {0, 1, 0, -1};
 
@@ -30,33 +30,27 @@ int shortestDistance(int N, int M, vector<vector<int>> A, int X, int Y)
     vector<vector<int>> visited(N, vector<int>(M, 0));
     q.push({0, {0, 0}}); // staring point
     visited[0][0] = -1;  // marking (0,0) as visited
-    int count = 0;
-    while (!q.empty())
-    {
+
+    while (!q.empty()) {
         int x = q.front().second.first;
         int y = q.front().second.second;
         int s = q.front().first;
 
         q.pop();
 
-        if (x == X && y == Y)
-        {
+        if (x == X && y == Y) {
             return s;
         }
 
-        for (int i = 0; i < 4; i++)
-        {
+        for (int i = 0; i < 4; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (nx < 0 || nx >= N || ny < 0 || ny >= M)
-            {
+            if (nx < 0 || nx >= N || ny < 0 || ny >= M) {
                 continue;
             }
-            else
-            {
-                if (A[nx][ny] == 1 && visited[nx][ny] == 0)
-                {
+            else {
+                if (A[nx][ny] == 1 && visited[nx][ny] == 0) {
                     q.push({s + 1, {nx, ny}});
                     visited[nx][ny] = 1; // marking it as visited
                 }
@@ -66,8 +60,7 @@ int shortestDistance(int N, int M, vector<vector<int>> A, int X, int Y)
     return -1;
 }
 
-int main()
-{
+int main() {
     int N = 3;
     int M = 4;
     vector<vector<int>> A = {{0, 0, 0, 0},
