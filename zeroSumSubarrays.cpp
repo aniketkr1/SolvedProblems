@@ -5,12 +5,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-long long int findSubarrays(vector<long long int> &arr, int n) {
+int findSubarrays(vector<long long int> &arr, int n) {
     
-    long long int count = 0;
+    int count = 0;
     map<int, int> mp;
     long long int sum = 0;
-    for(long long int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         sum = sum + arr[i];
         if(sum == 0) {
             count++;
