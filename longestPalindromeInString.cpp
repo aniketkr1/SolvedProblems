@@ -1,11 +1,15 @@
-// cpp program to find the longest palindrome substring in a string
-// Input: "aaaabbaa"
-// Output: aabbaa
-// Explanation: The longest Palindromic substring is "aabbaa"
-// Input: "abc"
-// Output: a
-// Explanation: "a", "b" and "c" are the longest palindromes with same length
-//The result is the one with the least starting index.
+/*
+cpp program to find the longest palindrome substring in a string
+Input: "aaaabbaa"
+Output: aabbaa
+Explanation: The longest Palindromic substring is "aabbaa"
+Input: "abc"
+Output: a
+Explanation: "a", "b" and "c" are the longest palindromes with same length
+The result is the one with the least starting index.
+
+*/
+
 
 
 #include<bits/stdc++.h>
