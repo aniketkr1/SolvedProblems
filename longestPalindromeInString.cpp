@@ -7,10 +7,7 @@ Input: "abc"
 Output: a
 Explanation: "a", "b" and "c" are the longest palindromes with same length
 The result is the one with the least starting index.
-
 */
-
-
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -29,7 +26,6 @@ bool isPalindrome(string temp) {
     return true;
 }
 string longestPalin (string S) {
-    // code here
     int maxLen = -1;
     string longestPalindrome="";
     for(int i = 0 ;i<S.length(); i++) {

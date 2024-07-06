@@ -10,7 +10,6 @@ struct node {
     struct node *next;
 };
 
-
 struct node *createLinkedList(struct node *head, int arr[], int n) {
     for(int i = 0; i<n; i++) {
         struct node *newNode = new node();
@@ -72,7 +71,5 @@ int main() {
     std::cout << "After removing duplicates Linked list:- ";
     node *res = removeDuplicates(temp1);
     displayList(res); std::cout << std::endl;
-
-  
 
 }
