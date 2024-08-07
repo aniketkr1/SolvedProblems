@@ -32,6 +32,5 @@ void printAllSubsequences(string ip, string op) {
 int main() {
     string ip = "abc";
     string op = "";
-    
     printAllSubsequences(ip, op);
 }
