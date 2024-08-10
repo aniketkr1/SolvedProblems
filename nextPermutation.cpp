@@ -49,7 +49,7 @@ void nextPermutation(vector<int>& nums) {
         // finding the smallest number i.e > nums[i] and in the right half of index
         // i.e index from i+1 to n-1 and swap it with nums[i] that is breakpoint element
         
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n-1; i > pos; i--) {
             if (nums[i] > nums[pos]) {
                 swap(nums[i], nums[pos]);
                 break;
