@@ -33,29 +33,27 @@ bool solve(int row, int col, int index, vector<vector<char>>& board, string word
     if (index >= word.size()) {
         return true;
     }
-
+    // making that cell as visited
+    char temp = board[row][col];
+    board[row][col] = '#';
+    // loop to check all direction (LRUD)
     for (int i = 0; i < 4; i++) {
         int nx = row + dx[i];
         int ny = col + dy[i];
 
-        // checking all 4 directions and if it is valid then then marking it with "#"
-        // so that we don't visit it again
         if (nx >= 0 && nx < m && ny >= 0 && ny < n && board[nx][ny] == word[index]) {
-            // making that cell as visited
-            char temp = board[row][col];
-            board[row][col] = '#';
-            // recursive call on that cell where the character is matched
+            // recursive call on that cell where the character is matched 
             // index will be index+1 (move the pointer to next character of the word)
             if (solve(nx, ny, index + 1, board, word, dx, dy, m, n) == true) {
                 return true;
             }
-            // backtrack(restore to origianl character so that we can check other possibilities)
-            board[row][col] = temp;
         }
     }
-
+    // backtrack(restore to origianl character so that we can check other possibilities)
+    board[row][col] = temp;
     return false;
 }
+
 bool exist(vector<vector<char>>& board, string word) {
     int m = board.size();
     int n = board[0].size();

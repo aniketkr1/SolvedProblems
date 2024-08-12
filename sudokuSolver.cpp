@@ -50,19 +50,16 @@ using namespace std;
 
 bool check(int row, int col, vector<vector<char>>& board, int n, char val) {
 
-    // check for row
     for (int i = 0; i < n; i++) {
+        // check for row
         if (board[row][i] == val) {
             return false;
         }
-    }
-    // check for col
-    for (int i = 0; i < n; i++) {
+        // check for col
         if (board[i][col] == val) {
             return false;
         }
     }
-
     // checking for submatrix of 3x3
     int startRow = (row / 3) * 3;
     int startCol = (col / 3) * 3;
@@ -81,7 +78,7 @@ bool solve(int row, int col, vector<vector<char>>& board, int n) {
     if (row == n) {
         return true;
     }
-    // move to next row and start from column index = 0
+    // when we reach the end of row, move to next row and start from column index = 0
     if (col == n) {
         return solve(row + 1, 0, board, n);
     }
